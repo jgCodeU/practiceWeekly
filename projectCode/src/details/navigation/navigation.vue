@@ -1,7 +1,10 @@
 <template>
   <div class="navigation">
       <div class="baseConversion" @click="goBaseConversion">进制转换</div>
+      <!-- <div class="rgbToGray" @click="goRgbToGray">rgb转灰度</div>
+      <div class="calculate" @click="goCalculate">算法练习</div> -->
   </div>
+  
 </template>
 
 <script>
@@ -17,6 +20,16 @@ export default {
           router.push({
               name : 'baseConversion'
           })
+      },
+      goRgbToGray() {
+          router.push({
+              name : 'rgbToGray' 
+          })
+      },
+      goCalculate() {
+          router.push({
+              name : 'calculate' 
+          })
       }
   }
 }
@@ -28,8 +41,11 @@ export default {
         padding: 0;
         margin: 0;
     }
-    .baseConversion {
+    .baseConversion,
+    .rgbToGray,
+    .calculate {
         position: relative;
+        margin-top: 20px;
         width: 100px;
         height: 50px;
         border: 2px solid #000;
