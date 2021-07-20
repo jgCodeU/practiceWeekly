@@ -1,8 +1,8 @@
 <template>
   <div class="navigation">
       <div class="baseConversion" @click="goBaseConversion">进制转换</div>
-      <!-- <div class="rgbToGray" @click="goRgbToGray">rgb转灰度</div>
-      <div class="calculate" @click="goCalculate">算法练习</div> -->
+      <!-- <div class="rgbToGray" @click="goRgbToGray">rgb转灰度</div> -->
+      <div class="calculate" @click="goCalculate">第k大元素</div>
   </div>
   
 </template>
