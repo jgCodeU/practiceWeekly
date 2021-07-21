@@ -52,7 +52,7 @@ export default {
         
         // 检查并转换输入字符串
         for(let i = 0; i<this.inputArr.length ; i++){
-          if(Number(this.inputArr[i])) {
+          if(Number(this.inputArr[i] !== NaN)) {
             this.inputArr[i] = Number(this.inputArr[i]);
             // console.log(this.inputArr);
             continue;
