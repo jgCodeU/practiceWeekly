@@ -1,11 +1,6 @@
+import { Vnode } from "./vnode";
 export default class Engine {
     render(tmpl, data) {
-        // let re = /<(\w+)\s*([^>]*)>([^<]*)<\/\1>/gm;
-        // let re = /(\{\{\w\.\w\}\})/gm;
-        // let re = /(\{\{(\w+)\.(\w+)\}\})/gm;//用到
-        // let re = /\{\{((\w+)|(\w+)\.(\w+))\}\}/gm;//替换数据
-        // let re = /\{\{((\w+)|(\w+)\.(\w+))\}\}/gm;
-        // let re = /"(\w+)\.(\w+)"/gm//判断条件
         let re = /\{\{((\w+)|(\w+)\.(\w+))\}\}|"(\w+)\.(\w+)"/gm;//替换数据
         while (re.test(tmpl)) {
             tmpl = tmpl.replace(re, (s0, s1, s2, s3,s4,s5,s6) => {
@@ -25,5 +20,17 @@ export default class Engine {
             });
         }
         console.log("result result>>", tmpl);
+        return tmpl;
+
+        
     }
 }
+
+// function parseToDom(htmlString){
+//     const tpl = document.createElement('template');
+//     tpl.innerHTML = htmlString;
+//     return tpl.content;
+// }
+
+// const el = parseToDom('<h1>123</h1>');
+// document.body.append(el);

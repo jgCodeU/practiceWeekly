@@ -1,9 +1,9 @@
 
 <template>
   <div class="calculate">
-    <!-- <div class="returnNavigation" @click="returnNavigation()">
+    <div class="returnNavigation" @click="returnNavigation()">
       <p>返回首页</p>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -25,6 +25,7 @@ export default {
   methods: {
     returnNavigation() {
       console.log("返回首页");
+      
       router.push({
         name: "navigation",
       });
@@ -35,8 +36,8 @@ export default {
     console.log('hjg--页面根元素',this.$el);
     console.log("v1", v1);
     v1.render(this.tmpl, {
-      image: "some img",
-      info: { showImage: true, showDate: false, name: "aaa" },
+      image: "https://www.baidu.com/img/flexible/logo/pc/result.png",
+      info: { showImage: true, showDate: false, name: "模板解析" },
     });
   },
 };
