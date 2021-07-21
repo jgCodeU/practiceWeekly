@@ -142,8 +142,7 @@ export default {
   background-color: pink;
   border: solid 1px #000;
 }
-.resulTitle {
-}
+
 
 .returnNavigation p {
   border: solid 1px #000;

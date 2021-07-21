@@ -5,6 +5,7 @@ import navigation from '@/details/navigation/navigation'
 import baseConversion from '@/details/baseConversion/baseConversion'
 import rgbToGray from '@/details/rgbToGray/rgbToGray'
 import calculate from '@/details/calculate/calculate'
+import parseHtml from '@/details/parseHtml/parseHtml'
 
 Vue.use(Router)
 
@@ -29,6 +30,12 @@ export default new Router({
       path: '/calculate',
       name: 'calculate',
       component: calculate
-    }
+    },
+    {
+      path: '/parseHtml',
+      name: 'parseHtml',
+      component: parseHtml
+    },
+    
   ]
 })

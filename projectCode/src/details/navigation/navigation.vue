@@ -3,6 +3,7 @@
       <div class="baseConversion" @click="goBaseConversion">进制转换</div>
       <!-- <div class="rgbToGray" @click="goRgbToGray">rgb转灰度</div> -->
       <div class="calculate" @click="goCalculate">第k大元素</div>
+      <div class="parseHtml" @click="goParseHtml">模板解析</div>
   </div>
   
 </template>
@@ -30,6 +31,11 @@ export default {
           router.push({
               name : 'calculate' 
           })
+      },
+      goParseHtml() {
+          router.push({
+              name:'parseHtml'
+          })
       }
   }
 }
@@ -43,7 +49,8 @@ export default {
     }
     .baseConversion,
     .rgbToGray,
-    .calculate {
+    .calculate,
+    .parseHtml {
         position: relative;
         margin-top: 20px;
         width: 100px;
